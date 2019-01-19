@@ -35,3 +35,15 @@ var structObject = HumanStruct(name: "Rasel Ahmed", age: 25)
 var newStructObject = structObject
 newStructObject.age = 21
 print(structObject.age) //25
+
+//: Mutable Class
+let humanObjClass = HumanClass(name: "Steve Jobs",age:53)
+humanObjClass.name = "Tim Cook"
+// It's possible to assign new name value
+print(humanObjClass.name) // Tim Cook
+
+//: Immutable Struct
+let humanObjStruct = HumanStruct(name: "Mark Zuckerberg", age: 34)
+//humanObjStruct.name = "Elon Musk"
+//can't assign property humanObjStruct is a let constant
+print(humanObjStruct.name) //Mark Zuckerberg
