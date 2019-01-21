@@ -1,3 +1,8 @@
+/*
+ @Author Faisal Ahmed
+ @Email Hello@imfaisal.me
+ @Facebook Fb.com/Faisal50x
+ */
 
 //: Multiple ways to create array
 
@@ -37,5 +42,65 @@ for number in 1...50 {
 var oddNumberSet = Set(oddNumbers)
 let evenNumberSet = Set(evenNumbers)
 
-print(oddNumbers)
-print(evenNumberSet)
+//print(oddNumbers)
+//print(evenNumberSet)
+
+//:Union
+print(oddNumberSet.union(evenNumberSet))
+
+//: SymmetricDifference
+oddNumberSet.symmetricDifference(evenNumberSet)
+
+//:Intersection
+oddNumberSet.intersection(evenNumberSet)
+
+//: Subtraction
+oddNumberSet.subtract(evenNumberSet)
+
+var numberSet = Set([1,2,3])
+let secNumberSet = Set([1,2,4])
+
+numberSet.intersection(secNumberSet)
+print(numberSet)
+
+//: Filter/Sort
+// Convert Sets to sorted Array
+let sortedArray = evenNumberSet.sorted()
+print(sortedArray)
+// functional programming
+let sortedArrayFromHighToLow = evenNumberSet.sorted { $0 > $1 }
+print(sortedArrayFromHighToLow)
+
+//: Practical Usage of Set
+//1. Finding unique letters
+//2. Finding unique visitors
+//3. Any game logic
+
+let firstScore = (name: "Faisal", score: 9)
+firstScore.0
+firstScore.1
+firstScore.name
+firstScore.score
+
+//: Practicale Usage
+
+let httpSuccess = (code: 200 , description: "success")
+httpSuccess.code
+
+//let httpFailture: [Any] = [401, "Fail"]
+
+
+//: Bous Tips
+var dog = "dog", cat = "cat"
+print(dog)
+
+var (x,y,z) = (1,2,3)
+print(x)
+print(y)
+print(z)
+
+var shoppingList = ["Eggs", "Milk", "Rice"]
+
+for (i, v) in shoppingList.enumerated() {
+    print(i , v)
+}
