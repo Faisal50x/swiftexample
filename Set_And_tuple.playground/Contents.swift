@@ -1,3 +1,4 @@
+
 //: Multiple ways to create array
 
 var arrayOne: [Double] = [] //
@@ -24,3 +25,17 @@ setThree.remove("Swift")
 //: Generate odd and even numbers
 var oddNumbers: [Int] = []
 var evenNumbers: [Int] = []
+
+for number in 1...50 {
+    if number % 2 == 0 {
+        evenNumbers.append(number)
+    } else {
+        oddNumbers.append(number)
+    }
+}
+
+var oddNumberSet = Set(oddNumbers)
+let evenNumberSet = Set(evenNumbers)
+
+print(oddNumbers)
+print(evenNumberSet)
